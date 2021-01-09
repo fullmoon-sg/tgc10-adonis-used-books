@@ -1,0 +1,18 @@
+@layout('base')
+
+
+@section('content')
+<h1> Update Publisher : {{publisher.name}}</h1>
+<form method="POST">
+  {{csrfField()}}
+  <div>
+  <label class="form-label">Name :</label>
+  <input type="text" name="name" class="form-control" value="{{publisher.name}}"/>
+  </div>
+  <div>
+  <label class="form-label">Email :</label>
+  <input type="text" name="email" class="form-control" value="{{publisher.email}}"/>
+  </div>
+  <input type="submit" class="btn btn-primary mt-3"/>
+</form>
+@endsection

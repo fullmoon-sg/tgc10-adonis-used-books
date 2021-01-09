@@ -1,0 +1,13 @@
+@layout('base')
+
+@section('content')
+<h1> Delete : {{publisher.name}} ? </h1>
+<form method="POST">
+  {{csrfField()}}
+  <div class="alert alert-danger">
+    Are you sure you want to delete ?
+    <input type="submit" class="btn btn-danger" value="Yes"/>
+    <a href="{{route('show_all_publishers')}}" class="btn btn-success">No</a>
+  </div>
+</form>
+@endsection

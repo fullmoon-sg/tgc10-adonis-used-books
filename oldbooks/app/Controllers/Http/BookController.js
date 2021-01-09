@@ -10,8 +10,8 @@ class BookController {
     })
     }
 
-  async show({params,view}) {
-    // extract out the book_id parameter from the URL
+ async show({params,view}) {
+console.log(params.book_id)
     let book = await Book.find(params.book_id)
     return view.render("books/show", {
       "book ": book.toJSON()
