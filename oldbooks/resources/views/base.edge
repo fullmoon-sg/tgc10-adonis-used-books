@@ -8,12 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>
+     @section('title')
+     @endsection
+    </title>
   </head>
   <body>
     <div class="container">
-        <h1>{{book.title}}</h1>
-            <p>Condition: {{book.condition}}</p>
+        @section("content")
+        @endsection
     </div>
 
     <!-- Optional JavaScript -->
